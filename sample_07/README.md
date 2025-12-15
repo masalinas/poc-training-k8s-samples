@@ -75,7 +75,7 @@ Delete the Pod and recreate it — data must persist.
 
 - **STEP_04**: Verify
 
-    Execute this command:
+    Execute these command:
 
      ```
     $ kubectl delete pod pv-pod
