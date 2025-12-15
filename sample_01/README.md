@@ -8,9 +8,14 @@ Create a Pod with two containers:
 
 Use an emptyDir volume to share data.
 
+## Expected Results
+
+- NGINX serves a file that updates every 5 seconds with the current date
+- Both containers share the same volume
+
 ## Steps:
 
-- **STEP_01**: Design K8s objects
+- **STEP_01**: Design K8s deployment file
 
 Write a deployment file with your objects:
 
@@ -36,19 +41,18 @@ Write a deployment file with your objects:
             mountPath: /data
     volumes:
         - name: shared-data
-        emptyDir: {}   
-
+        emptyDir: {}
     ```
 
 - **STEP_02**: Deploy k8s objects
 
-Execute this command:
+    Execute this command:
 
     ```
     $ kubectl apply -f sidecar-pod.yaml
     ```
 
-- **STEP_03**: Check the functionality
+- **STEP_03**: Verify
 
     We are going to create a temporal fort forward connection to the new pod and check with curl command:
 
