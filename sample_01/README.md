@@ -1,6 +1,4 @@
 # Description
-Multi-Container Pod (Sidecar pattern)
-
 Create a Pod with two containers:
 
 - nginx serving files from /usr/share/nginx/html

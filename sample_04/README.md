@@ -1,6 +1,5 @@
 # Description
-
-Service Types (ClusterIP → NodePort). Expose an NGINX Deployment using:
+Expose an NGINX Deployment using:
 
 - ClusterIP
 - Change it to NodePort

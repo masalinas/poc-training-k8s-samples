@@ -4,23 +4,23 @@ Some Kubernetes samples
 
 - [Sample_01](./sample_01/README.md):
 
-    Create a Pod with two containers. Sidecar Pattern
+    Multi-Container Pod (Sidecar pattern)
 
 - [Sample_02](./sample_02/README.md): 
 
-    
+    Deployment + Rolling Update Strategy    
 
 - [Sample_03](./sample_03/README.md): 
 
-    
+    ConfigMap + Environment Variables.
 
 - [Sample_04](./sample_04/README.md): 
 
-    
+    Service Types (ClusterIP → NodePort)
 
 - [Sample_05](./sample_05/README.md): 
 
-    
+    Liveness & Readiness Probes
 
 - [Sample_06](./sample_06/README.md): 
 

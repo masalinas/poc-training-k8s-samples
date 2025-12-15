@@ -1,6 +1,5 @@
 # Description
-
-Liveness & Readiness Probes. Create a Pod that:
+Create a Pod that:
 
     - Uses HTTP probes
     - Fails readiness until 10 seconds after startup

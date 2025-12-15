@@ -1,6 +1,4 @@
 # Description
-
-Deployment + Rolling Update Strategy. 
 Create a Deployment with:
 
 - 3 replicas

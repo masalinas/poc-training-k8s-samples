@@ -1,6 +1,5 @@
 # Description
-
-ConfigMap + Environment Variables. Create a ConfigMap containing:
+Create a ConfigMap containing:
 
 - APP_ENV=production
 - APP_DEBUG=false
