@@ -17,7 +17,7 @@ Create a Deployment with:
 
     Write a deployment file with your objects:
 
-    ```
+    ```yaml
     apiVersion: apps/v1
     kind: Deployment
     metadata:

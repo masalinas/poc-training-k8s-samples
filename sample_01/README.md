@@ -15,9 +15,9 @@ Use an emptyDir volume to share data.
 
 - **STEP_01**: Design K8s deployment file
 
-Write a deployment file with your objects:
+    Write a deployment file with your objects:
 
-    ```
+    ```yaml
     apiVersion: v1
     kind: Pod
     metadata:

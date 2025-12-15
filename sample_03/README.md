@@ -21,9 +21,8 @@ Create a ConfigMap containing:
 
 - **STEP_02**: Design K8s deployment file
 
-    ```
+    ```yaml
     apiVersion: v1
-
     kind: Pod
     metadata:
     name: env-pod
