@@ -21,25 +21,25 @@ Create a Deployment with:
     apiVersion: apps/v1
     kind: Deployment
     metadata:
-    name: nginx-deploy
+        name: nginx-deploy
     spec:
-    replicas: 3
-    strategy:
-        type: RollingUpdate
-        rollingUpdate:
-        maxUnavailable: 1
-    selector:
-        matchLabels:
-        app: nginx
-    template:
-        metadata:
-        labels:
+        replicas: 3
+        strategy:
+            type: RollingUpdate
+            rollingUpdate:
+            maxUnavailable: 1
+        selector:
+            matchLabels:
             app: nginx
-        spec:
-        containers:
-            - name: nginx
-            image: nginx:1.21
-    ```
+        template:
+            metadata:
+            labels:
+                app: nginx
+            spec:
+                containers:
+                    - name: nginx
+                    image: nginx:1.21
+        ```
 
 - **STEP_02**: Deploy k8s objects
 

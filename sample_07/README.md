@@ -56,20 +56,20 @@ Delete the Pod and recreate it — data must persist.
     apiVersion: v1
     kind: Pod
     metadata:
-    name: pv-pod
+        name: pv-pod
     spec:
     containers:
         - name: app
-        image: busybox
-        command: ["/bin/sh", "-c"]
-        args:
+          image: busybox
+          command: ["/bin/sh", "-c"]
+          args:
             - echo "Hello Kubernetes" >> /data/file.txt; sleep 3600
-        volumeMounts:
+          volumeMounts:
             - mountPath: /data
-            name: storage
+              name: storage
     volumes:
         - name: storage
-        persistentVolumeClaim:
+          persistentVolumeClaim:
             claimName: pvc-data
     ```
 

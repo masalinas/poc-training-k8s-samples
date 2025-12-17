@@ -25,17 +25,17 @@ Create a ConfigMap containing:
     apiVersion: v1
     kind: Pod
     metadata:
-    name: env-pod
+        name: env-pod
     spec:
-    containers:
-        - name: app
-        image: busybox
-        command: ["/bin/sh", "-c"]
-        args:
-            - env; sleep 3600
-        envFrom:
-            - configMapRef:
-                name: app-config
+        containers:
+            - name: app
+                image: busybox
+                command: ["/bin/sh", "-c"]
+                args:
+                    - env; sleep 3600
+            envFrom:
+                - configMapRef:
+                    name: app-config
     ```    
 
 - **STEP_03**: Deploy k8s objects

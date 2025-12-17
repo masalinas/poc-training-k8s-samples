@@ -27,12 +27,12 @@ Attempt to evict pods.
     apiVersion: policy/v1
     kind: PodDisruptionBudget
     metadata:
-    name: web-pdb
+        name: web-pdb
     spec:
-    minAvailable: 2
-    selector:
-        matchLabels:
-        app: web
+        minAvailable: 2
+        selector:
+            matchLabels:
+                app: web
     ```
 
 - **STEP_03**:  Apply

@@ -28,25 +28,25 @@ Generate load and observe scaling behavior.
     apiVersion: apps/v1
     kind: Deployment
     metadata:
-    name: hpa-app
+        name: hpa-app
     spec:
-    replicas: 1
-    selector:
-        matchLabels:
-        app: hpa-app
-    template:
-        metadata:
-        labels:
+        replicas: 1
+        selector:
+            matchLabels:
             app: hpa-app
-        spec:
-        containers:
-            - name: app
-            image: k8s.gcr.io/hpa-example
-            resources:
-                requests:
-                cpu: "100m"
-                limits:
-                cpu: "500m"
+        template:
+            metadata:
+            labels:
+                app: hpa-app
+            spec:
+                containers:
+                    - name: app
+                      image: k8s.gcr.io/hpa-example
+                      resources:
+                        requests:
+                            cpu: "100m"
+                            limits:
+                            cpu: "500m"
     ```
 
 - **STEP_03**: Deploy k8s objects

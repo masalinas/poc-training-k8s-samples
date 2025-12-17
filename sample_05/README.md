@@ -21,23 +21,23 @@ Create a Pod that:
     apiVersion: v1
     kind: Pod
     metadata:
-    name: probe-pod
+        name: probe-pod
     spec:
-    containers:
-        - name: web
-        image: nginx
-        readinessProbe:
-            httpGet:
-            path: /
-            port: 80
-            initialDelaySeconds: 10
-            periodSeconds: 5
-        livenessProbe:
-            httpGet:
-            path: /
-            port: 80
-            initialDelaySeconds: 15
-            periodSeconds: 10
+        containers:
+            - name: web
+              image: nginx
+              readinessProbe:
+                httpGet:
+                path: /
+                port: 80
+                initialDelaySeconds: 10
+                periodSeconds: 5
+             livenessProbe:
+                httpGet:
+                path: /
+                port: 80
+                initialDelaySeconds: 15
+                periodSeconds: 10
     ```
 
 - **STEP_02**: Deploy k8s objects

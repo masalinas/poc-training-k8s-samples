@@ -28,17 +28,17 @@ Create a Pod that:
     apiVersion: v1
     kind: Pod
     metadata:
-    name: init-demo
+        name: init-demo
     spec:
-    initContainers:
-        - name: wait-for-db
-        image: busybox
-        command: ['sh', '-c']
-        args:
-            - until wget -q http://db; do echo waiting for db; sleep 5; done
-    containers:
-        - name: app
-        image: nginx
+        initContainers:
+            - name: wait-for-db
+              image: busybox
+              command: ['sh', '-c']
+              args:
+                - until wget -q http://db; do echo waiting for db; sleep 5; done
+        containers:
+            - name: app
+              image: nginx
     ```
 
 - **STEP_03**:

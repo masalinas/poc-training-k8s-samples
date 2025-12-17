@@ -37,18 +37,18 @@ Create:
     apiVersion: networking.k8s.io/v1
     kind: NetworkPolicy
     metadata:
-    name: allow-frontend
+        name: allow-frontend
     spec:
-    podSelector:
-        matchLabels:
-        run: backend
-    policyTypes:
-        - Ingress
-    ingress:
-        - from:
-            - podSelector:
-                matchLabels:
-                run: frontend
+        podSelector:
+            matchLabels:
+            run: backend
+        policyTypes:
+            - Ingress
+        ingress:
+            - from:
+                - podSelector:
+                    matchLabels:
+                        run: frontend
     ```
 
 - **STEP_03**: Verify
