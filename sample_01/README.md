@@ -25,21 +25,21 @@ Use an emptyDir volume to share data.
     spec:
     containers:
         - name: nginx
-        image: nginx
-        volumeMounts:
+          image: nginx
+          volumeMounts:
             - name: shared-data
-            mountPath: /usr/share/nginx/html
+              mountPath: /usr/share/nginx/html
         - name: writer
-        image: busybox
-        command: ["/bin/sh", "-c"]
-        args:
+          image: busybox
+          command: ["/bin/sh", "-c"]
+          args:
             - while true; do date >> /data/index.html; sleep 5; done
-        volumeMounts:
+          volumeMounts:
             - name: shared-data
-            mountPath: /data
+              mountPath: /data
     volumes:
         - name: shared-data
-        emptyDir: {}
+          emptyDir: {}
     ```
 
 - **STEP_02**: Deploy k8s objects
