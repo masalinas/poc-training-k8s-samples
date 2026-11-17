@@ -42,3 +42,6 @@ Some Kubernetes samples
 
     Pod Disruption Budget (PDB)
     
+- [Sample_11](./sample_11/README.md):
+
+    Kustomize
