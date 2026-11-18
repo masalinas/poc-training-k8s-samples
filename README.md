@@ -45,3 +45,7 @@ Some Kubernetes samples
 - [Sample_11](./sample_11/README.md):
 
     Kustomize
+
+- [Sample_12](./sample_12/README.md):
+
+    Tains/Affinity
