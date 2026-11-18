@@ -17,7 +17,7 @@ $ kubectl label nodes nodo-gpu-01 gpu=true
 
 Paso 2: Manifiesto YAML del Deployment
 
-Guarda el siguiente código en un archivo llamado deployment-gpu.yaml. Fíjate que en un Deployment, las secciones tolerations y affinity van dentro de spec.template.spec (la plantilla de los Pods)
+Guarda el siguiente código en un archivo llamado `deployment-gpu.yaml`. Fíjate que en un Deployment, las secciones tolerations y affinity van dentro de spec.template.spec (la plantilla de los Pods)
 
 ```shell
 apiVersion: apps/v1

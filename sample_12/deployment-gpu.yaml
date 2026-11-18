@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-cuda-gpu
+  labels:
+    app: cuda-worker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cuda-worker
+  template:
+    metadata:
+      labels:
+        app: cuda-worker
+    spec:
+      # 1. TOLERANCIA: Permite al Pod entrar en el nodo con el taint gpu=true:NoSchedule
+      tolerations:
+      - key: "gpu"
+        operator: "Equal"
+        value: "true"
+        effect: "NoSchedule"
+
+      # 2. AFINIDAD: Obliga al Pod a ir únicamente a nodos con la label gpu=true
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "gpu"
+                operator: "In"
+                values:
+                - "true"
+
+      containers:
+      - name: contenedor-cuda
+        image: nvidia/cuda:12.2.0-base-ubuntu22.04
+        # Mantiene el contenedor vivo ejecutando nvidia-smi en bucle para verificar la GPU
+        command: ["/bin/bash", "-c", "--"]
+        args: ["while true; do nvidia-smi; sleep 30; done;"]
+        
+        # 3. RECURSOS: Asigna 1 GPU física de NVIDIA al contenedor
+        resources:
+          limits:
+            nvidia.com: 1

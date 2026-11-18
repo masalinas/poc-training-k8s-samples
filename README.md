@@ -2,6 +2,10 @@
 
 Some Kubernetes samples
 
+- [Sample_00](./sample_00/README.md):
+
+    Kubernetes information
+
 - [Sample_01](./sample_01/README.md):
 
     Multi-Container Pod (Sidecar pattern)
