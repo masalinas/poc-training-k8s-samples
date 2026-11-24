@@ -14,7 +14,7 @@ Check:
 $ kubectl config get-clusters
 ```
 
-- Paso 2: crear el usuario que va a sonectarse al cluster de kubernetes
+- Paso 2: Crear el usuario que va a sonectarse al cluster de kubernetes
 ```shell
 $ kubectl config set-credentials mi-usuario \
   --client-certificate-data=<CLIENT_CERT_DATA> \
@@ -26,7 +26,7 @@ Check:
 $ kubectl config get-users
 ```
 
-- Paso 3: Create finally the context que une cluster y usuario:
+- Paso 3: Creare finalmente el contexto que une cluster y usuario:
 ```shell
 $ kubectl config set-context mi-contexto \
   --cluster=mi-cluster \
@@ -35,7 +35,7 @@ $ kubectl config set-context mi-contexto \
 ```
 
 
-- Pas4: Activar el nuevo contexto:
+- Paso 4: Activar el nuevo contexto:
 ```shell
 $ kubectl config use-context mi-contexto
 ```
