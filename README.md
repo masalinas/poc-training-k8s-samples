@@ -53,3 +53,7 @@ Some Kubernetes samples
 - [Sample_12](./sample_12/README.md):
 
     Tains/Affinity
+
+- [Sample_13](./sample_13/README.md):
+
+    Context Configuration
