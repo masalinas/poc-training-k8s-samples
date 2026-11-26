@@ -60,4 +60,4 @@ Some Kubernetes samples
 
 - [Sample_14](./sample_14/README.md):
 
-    Get Auth 
+    Inspect Credentials
